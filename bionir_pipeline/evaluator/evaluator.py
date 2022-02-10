@@ -1,0 +1,1 @@
+# Evaluator class is to take a pipline and evaluate it with a given dataset and an evaluation metric
