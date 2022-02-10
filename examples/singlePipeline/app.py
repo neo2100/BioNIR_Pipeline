@@ -2,11 +2,11 @@
 # Output: a list of documents containing:
 ## id, directLink, type, text
 
-from bionir_pipeline.pipeline.pipeline import Pipeline
+from bionir_pipeline import Pipeline
 
 pipeline = Pipeline()
 
 # NOTE: while pushing pipes, the order is important
-pipeline.push("PubMed as documentRetrieval", {"maxDocumentNumber":5})
+pipeline.push("PubMed as documentRetrieval", {"maxDocumentNumber":1})
 
-print(pipeline.execute({"query":"some query"}))
+print(pipeline.execute({"query":"Covid in Iran"}))

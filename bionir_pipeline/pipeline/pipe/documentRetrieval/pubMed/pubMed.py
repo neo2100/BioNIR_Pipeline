@@ -2,6 +2,7 @@
 # Output: a list of documents containing:
 ## id, directLink, type, text
 
+from .fetchDocuments import fetchDocuments
 
 class PubMed:
 
@@ -19,4 +20,7 @@ class PubMed:
         else:
             print("ERROR: query is missing in the input for PubMed")
 
-        return [{'id':"asd", 'direcLink':"http://", 'type':"abstract", 'text':"something"}]
+        return fetchDocuments(self.query, self.maxDocumentNumber)
+
+
+    #def refineDocuments(self):
