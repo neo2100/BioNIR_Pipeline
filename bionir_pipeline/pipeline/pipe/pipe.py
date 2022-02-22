@@ -13,6 +13,7 @@
 ## id, directLink, type, text, rank, score
 
 from .documentRetrieval.documentRetrieval import DocumentRetrieval
+from .preprocessing.preprocessing import Preprocessing
 
 class Pipe:
     def __init__(self, pipeName, parameters):
@@ -22,6 +23,8 @@ class Pipe:
         
         if pipeType[1] == "documentRetrieval":
             self.pipe = DocumentRetrieval(pipeType[0], parameters)
+        elif pipeType[1] == "preprocessing":
+            self.pipe = Preprocessing(pipeType[0], parameters)
 
     def execute(self, input):
         return self.pipe.execute(input)

@@ -8,5 +8,6 @@ pipeline = Pipeline()
 
 # NOTE: while pushing pipes, the order is important
 pipeline.push("PubMed as documentRetrieval", {"maxDocumentNumber":1})
+pipeline.push("SentenceSplittingByNLTK as preprocessing", {})
 
 print(pipeline.execute({"query":"Covid in Iran"}))

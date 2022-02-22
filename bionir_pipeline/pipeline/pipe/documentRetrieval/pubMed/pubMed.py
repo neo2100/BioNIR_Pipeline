@@ -10,6 +10,7 @@ class PubMed:
         # some prepartion
         if 'maxDocumentNumber' in parameters:
             self.maxDocumentNumber = parameters['maxDocumentNumber']
+            print("Info: PubMed as document retrieval has been initialized")
         else:
             self.maxDocumentNumber = 10
             print("WARNING: no maxDocumentNumber is provided for PubMed. (default value = 10)")
@@ -20,7 +21,8 @@ class PubMed:
         else:
             print("ERROR: query is missing in the input for PubMed")
 
-        return fetchDocuments(self.query, self.maxDocumentNumber)
+        input['documents'] = fetchDocuments(self.query, self.maxDocumentNumber)
+        return input
 
 
     #def refineDocuments(self):
