@@ -12,7 +12,7 @@ class SentenceSplittingByNLTK:
 
     def execute(self, input):
         if not 'documents' in input:
-            print("ERROR: query is missing in the input for SentenceSplittingByNLTK")
+            print("ERROR: documents is missing in the input for SentenceSplittingByNLTK")
 
         for document in input['documents']:
             document['sentences'] = sent_tokenize(document['text'])
