@@ -10,10 +10,11 @@ class PubMed:
         # some prepartion
         if 'maxDocumentNumber' in parameters:
             self.maxDocumentNumber = parameters['maxDocumentNumber']
-            print("Info: PubMed as document retrieval has been initialized")
         else:
             self.maxDocumentNumber = 10
             print("WARNING: no maxDocumentNumber is provided for PubMed. (default value = 10)")
+            
+        print("Info: PubMed as document retrieval has been initialized")
 
     def execute(self, input):
         if 'query' in input:
