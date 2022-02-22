@@ -14,6 +14,7 @@
 
 from .documentRetrieval.documentRetrieval import DocumentRetrieval
 from .preprocessing.preprocessing import Preprocessing
+from .embedding.embedding import Embedding
 
 class Pipe:
     def __init__(self, pipeName, parameters):
@@ -25,6 +26,8 @@ class Pipe:
             self.pipe = DocumentRetrieval(pipeType[0], parameters)
         elif pipeType[1] == "preprocessing":
             self.pipe = Preprocessing(pipeType[0], parameters)
+        elif pipeType[1] == "embedding":
+            self.pipe = Embedding(pipeType[0], parameters)
 
     def execute(self, input):
         return self.pipe.execute(input)
