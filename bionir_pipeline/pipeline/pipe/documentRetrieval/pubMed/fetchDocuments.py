@@ -11,8 +11,8 @@ def fetchDocuments(query, maxDocumentNumber):
     singleDocs = []
     for index, article in enumerate(allDocs):
         singleDocs.append({'id': str(index*2) + '-' + article.pubmed_id+'-TI', 'text': article.title,
-                          'direcLink': "https://pubmed.ncbi.nlm.nih.gov/"+article.pubmed_id+"/", 'type': "title"})
+                          'direcLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+article.pubmed_id+"/", 'type': "title"})
         singleDocs.append({'id': str(index*2+1) + '-' + article.pubmed_id+'-AB', 'text': article.abstract,
-                          'direcLink': "https://pubmed.ncbi.nlm.nih.gov/"+article.pubmed_id+"/", 'type': "abstract"})
+                          'direcLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+article.pubmed_id+"/", 'type': "abstract"})
 
     return singleDocs
