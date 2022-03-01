@@ -1,2 +1,3 @@
 pymed
 nltk
+sentence-transformers
