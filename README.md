@@ -4,6 +4,6 @@ Explainable Neural Information Retrieval in Biomedical Science (BioNIR) _  Infor
 To Do
 -----
 -   Install package via: pip install -e .
--   Test abd run examples in: /bionir_pipeline/examples
+-   Test and run examples in: /bionir_pipeline/examples
 
 Pull requests are encouraged!
