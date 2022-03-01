@@ -3,6 +3,8 @@
 # Output: a list of "documents" at least containing: "sentences" and "sentencesEmbedded"
 # Output: "query" and "queryEmbedded"
 
+# INFO: for more infor about the models: https://www.sbert.net/docs/pretrained_models.html
+
 from sentence_transformers import SentenceTransformer
 
 class SBERT:
