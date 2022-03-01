@@ -1,6 +1,6 @@
 # Input: a list of 'documents' at least containing: 'sentences'
-# Output: a list of documents containing:
-## id, directLink, type, text
+# Output: a list of "documents" at least containing: "sentences" and "sentencesEmbedded"
+# Output: "query" and "queryEmbedded"
 
 from .sbert.sbert import SBERT
 
