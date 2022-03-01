@@ -1,4 +1,4 @@
-# URL: https://pubmed.ncbi.nlm.nih.gov/<pubmed_id>/
+# URL: http://www.ncbi.nlm.nih.gov/pubmed/<pubmed_id>/
 
 from pymed import PubMed
 
