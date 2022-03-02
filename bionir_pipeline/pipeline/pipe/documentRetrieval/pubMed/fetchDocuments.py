@@ -1,4 +1,5 @@
 # URL: http://www.ncbi.nlm.nih.gov/pubmed/<pubmed_id>/
+# NOTE: update pymed with this bug fixed one: pip install -e git://github.com/iacopy/pymed.git@fork-fixes#egg=pymed
 
 from pymed import PubMed
 
@@ -10,9 +11,11 @@ def fetchDocuments(query, maxDocumentNumber):
     # create single docs including only pubmed_id, plus title or abstarct
     singleDocs = []
     for index, article in enumerate(allDocs):
-        singleDocs.append({'id': str(index*2) + '-' + article.pubmed_id+'-TI', 'text': article.title,
-                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+article.pubmed_id+"/", 'type': "title"})
-        singleDocs.append({'id': str(index*2+1) + '-' + article.pubmed_id+'-AB', 'text': article.abstract,
-                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+article.pubmed_id+"/", 'type': "abstract"})
+        #Sometimes article['pubmed_id'] contains list separated with comma - take first pubmedId in that list - thats article pubmedId
+        pubmedId = article.pubmed_id.partition('\n')[0]
+        singleDocs.append({'id': str(index*2) + '-' + pubmedId+'-TI', 'text': article.title,
+                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId+"/", 'type': "title"})
+        singleDocs.append({'id': str(index*2+1) + '-' + pubmedId+'-AB', 'text': article.abstract,
+                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId+"/", 'type': "abstract"})
 
     return singleDocs
