@@ -7,7 +7,7 @@ pubmed = PubMed(tool="BioNIR_Pipeline", email="mohammad_sh2100@yahoo.com")
 
 def fetchDocuments(query, maxDocumentNumber):
     allDocs = pubmed.query(query, max_results=maxDocumentNumber)
-
+    
     # create single docs including only pubmed_id, plus title or abstarct
     singleDocs = []
     for index, article in enumerate(allDocs):
