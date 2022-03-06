@@ -15,7 +15,8 @@ def fetchDocuments(query, maxDocumentNumber):
         pubmedId = article.pubmed_id.partition('\n')[0]
         singleDocs.append({'id': str(index*2) + '-' + pubmedId+'-TI', 'text': article.title,
                           'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId+"/", 'type': "title"})
-        singleDocs.append({'id': str(index*2+1) + '-' + pubmedId+'-AB', 'text': article.abstract,
-                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId+"/", 'type': "abstract"})
+        if(article.abstract):
+            singleDocs.append({'id': str(index*2+1) + '-' + pubmedId+'-AB', 'text': article.abstract,
+                              'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId+"/", 'type': "abstract"})
 
     return singleDocs
