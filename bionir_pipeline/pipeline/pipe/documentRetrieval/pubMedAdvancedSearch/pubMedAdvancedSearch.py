@@ -67,7 +67,7 @@ class PubMedAdvancedSearch:
             for word in subset:
                 query = query + word + ' '
             totalCount = getTotalResultsCount(query)
-            print(totalCount, query)
+            
             if totalCount == 0:
                 continue
             if totalCount < self.maxAroundDocumentNumber:
@@ -77,6 +77,5 @@ class PubMedAdvancedSearch:
             if totalCount < minTotalCount:
                 minTotalCount = totalCount
                 bestQuery = query
-        print(inverseIndex)
-        print(minTotalCount, bestQuery)
+                
         return bestQuery
