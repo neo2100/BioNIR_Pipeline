@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "61f80d5d882a024a1000003c",
+      "type": "yesno",
+      "body": "Do only changes in coding regions of MEF2C cause developmental disorders?"
+    },
+    {
+      "id": "61f58de2882a024a1000000a",
+      "type": "factoid",
+      "body": "Which factor is inhibited by Milvexian?"
+    },
+    {
+      "id": "6217d9de3a8413c653000025",
+      "type": "factoid",
+      "body": "What is Granzyme B?"
+    },
+    {
+      "id": "62211c853a8413c65300006d",
+      "type": "yesno",
+      "body": "Is CircRNA produced by back splicing of exon, intron or both, forming exon or intron circRNA?"
+    },
+    {
+      "id": "5fe31323a43ad3127800004d",
+      "type": "summary",
+      "body": "How does condensin affect the function of topoisomeraseII?"
+    },
+    {
+      "id": "6206c22ac9dfcb9c0900003e",
+      "type": "factoid",
+      "body": "Which signaling pathway does LY294002 inhibit?"
+    },
+    {
+      "id": "620c27e93a8413c653000006",
+      "type": "yesno",
+      "body": "Is METTL1 overexpression associated with better patient survival?"
+    },
+    {
+      "id": "61f58ef3882a024a1000000b",
+      "type": "list",
+      "body": "List monoclonal antibodies included in the REGEN-COV."
+    },
+    {
+      "id": "6217db1b3a8413c653000027",
+      "type": "factoid",
+      "body": "Which disease is caused by mutations in the gene PRF1?"
+    },
+    {
+      "id": "62211f453a8413c653000072",
+      "type": "factoid",
+      "body": "What protein is encoded by the GRN gene?"
+    },
+    {
+      "id": "5fdb4176a43ad3127800001a",
+      "type": "summary",
+      "body": "What is the difference in the roles of Tcf1 and Tcf3 during development?"
+    },
+    {
+      "id": "62058382c9dfcb9c09000031",
+      "type": "summary",
+      "body": "Why mix γ-cyclodextrin with grapefruit juice?"
+    },
+    {
+      "id": "62190ca03a8413c653000035",
+      "type": "factoid",
+      "body": "What is disrupted by ALS- and FTD-associated missense mutations in TBK1?"
+    },
+    {
+      "id": "61f59012882a024a1000000c",
+      "type": "summary",
+      "body": "What is Morel–Lavallée lesion?"
+    },
+    {
+      "id": "6217e7a63a8413c653000033",
+      "type": "summary",
+      "body": "What is known about the protein patatin?"
+    },
+    {
+      "id": "621ecac13a8413c65300005f",
+      "type": "factoid",
+      "body": "What is the mode of action of primaquine?"
+    },
+    {
+      "id": "5fe3131da43ad31278000049",
+      "type": "list",
+      "body": "Which databases are devoted to 3D genome interactions?"
+    },
+    {
+      "id": "621218fc3a8413c653000014",
+      "type": "list",
+      "body": "Where does REGN5458 bind to?"
+    },
+    {
+      "id": "61f80c37882a024a1000003b",
+      "type": "yesno",
+      "body": "Do mutations in KCNT2 only cause phenotypes with epilepsy?"
+    },
+    {
+      "id": "61f593f8882a024a1000000f",
+      "type": "yesno",
+      "body": "Is there an association between pyostomatitis vegetans and Crohn\u0027s disease?"
+    },
+    {
+      "id": "6217e1ac3a8413c653000031",
+      "type": "yesno",
+      "body": "Is serotonin transported by platelets?"
+    },
+    {
+      "id": "6221209b3a8413c653000074",
+      "type": "factoid",
+      "body": "Proteins in the karyopherin family (Kaps) are associated with what cellular process?"
+    },
+    {
+      "id": "5fe1fc84a43ad31278000036",
+      "type": "factoid",
+      "body": "What percentage of human genes have no introns?"
+    },
+    {
+      "id": "62121a463a8413c653000015",
+      "type": "list",
+      "body": "What are the currently FDA approved monoclonal antibodies for myeloma?"
+    },
+    {
+      "id": "61f563f7882a024a10000006",
+      "type": "factoid",
+      "body": "What is caused by biallelic variants in PCDHGC4?"
+    },
+    {
+      "id": "61f59592882a024a10000010",
+      "type": "yesno",
+      "body": "Is Sotrovimab effective for COVID-19?"
+    },
+    {
+      "id": "621b5bcc3a8413c65300003d",
+      "type": "yesno",
+      "body": "Is Otolin-1 a matrix protein?"
+    },
+    {
+      "id": "621eb93b3a8413c65300005b",
+      "type": "list",
+      "body": "List the drug targets of Faricimab?"
+    },
+    {
+      "id": "5fe31316a43ad31278000043",
+      "type": "factoid",
+      "body": "What induces downstream of gene (DoG) readthrough transcription?"
+    },
+    {
+      "id": "6206b5a8c9dfcb9c0900003a",
+      "type": "factoid",
+      "body": "What is the effect of rHDL-apoE3 on endothelial cell migration?"
+    },
+    {
+      "id": "620aedee3a8413c653000001",
+      "type": "yesno",
+      "body": "Is AGO2 related to cytokinesis?"
+    },
+    {
+      "id": "61f5ee57882a024a10000012",
+      "type": "factoid",
+      "body": "Hampton’s hump is characteristic to which disease?"
+    },
+    {
+      "id": "6217d9493a8413c653000022",
+      "type": "factoid",
+      "body": "What is the activity of Indoleamine 2,3-dioxygenase 1."
+    },
+    {
+      "id": "62211ebc3a8413c653000071",
+      "type": "factoid",
+      "body": "What is the purpose of  Macropinocytosis?"
+    },
+    {
+      "id": "5eb422150d431b5f73000009",
+      "type": "factoid",
+      "body": "Which was the first species in which a de novo gene emergence (\"gene birth\") was reported?"
+    },
+    {
+      "id": "6206c428c9dfcb9c0900003f",
+      "type": "summary",
+      "body": "What are chromones?"
+    },
+    {
+      "id": "620c28d03a8413c653000007",
+      "type": "factoid",
+      "body": "Which type of cancer has been suggested as a strategy for potential small-molecule inhibition of METTL3?"
+    },
+    {
+      "id": "61f5f580882a024a10000017",
+      "type": "summary",
+      "body": "What is the mechanism of action of Lanifibranor?"
+    },
+    {
+      "id": "621b61833a8413c65300003e",
+      "type": "yesno",
+      "body": "Is the protein HOXA11 associated with endometrial disease?"
+    },
+    {
+      "id": "6220cf383a8413c653000069",
+      "type": "summary",
+      "body": "Summarize the function of DEAH helicase DHX36 and its role in G-quadruplex-dependent processes."
+    },
+    {
+      "id": "5fd3c4f4a43ad31278000003",
+      "type": "summary",
+      "body": "What is the function of the YY1 transcriptional regulator?"
+    },
+    {
+      "id": "620c01ae3a8413c653000005",
+      "type": "list",
+      "body": "Which CYP genes\u0027 expression is decreased at the in vivo level following pomegranate juice consumption?"
+    },
+    {
+      "id": "62128a913a8413c653000017",
+      "type": "list",
+      "body": "Class-defining mutations in which genes drive FLT3-ITD-mutant AML?"
+    },
+    {
+      "id": "61f5924e882a024a1000000e",
+      "type": "list",
+      "body": "Belzutifan has shown effectiveness for which diseases?"
+    },
+    {
+      "id": "621b54f03a8413c65300003b",
+      "type": "factoid",
+      "body": "Where are the PUX proteins found?"
+    },
+    {
+      "id": "621ed10f3a8413c653000062",
+      "type": "yesno",
+      "body": "Are Tregs CD4(+)CD25(+) regulatory T cells a positive regulator of the immune response?"
+    },
+    {
+      "id": "5fdb4100a43ad31278000015",
+      "type": "yesno",
+      "body": "Is Mediator present at super enhancers?"
+    },
+    {
+      "id": "62057b35c9dfcb9c0900002d",
+      "type": "yesno",
+      "body": "Does atemoya juice inhibit the CYP1A2 enzyme?"
+    },
+    {
+      "id": "620997e9c9dfcb9c09000042",
+      "type": "list",
+      "body": "What is caused by biallelic variants in SPATA5L1?"
+    },
+    {
+      "id": "602346eb1cb411341a000090",
+      "type": "list",
+      "body": "A combination of which two drugs was tested in the IMbrave150 trial?"
+    },
+    {
+      "id": "6217dba43a8413c653000029",
+      "type": "summary",
+      "body": "Is ALS a heritable disease?"
+    },
+    {
+      "id": "62211fdf3a8413c653000073",
+      "type": "summary",
+      "body": "What is ARNIL?"
+    },
+    {
+      "id": "6211575f3a8413c653000011",
+      "type": "summary",
+      "body": "What is the indication of CPX-351?"
+    },
+    {
+      "id": "61f808cd882a024a1000003a",
+      "type": "list",
+      "body": "List signs of patients with biallelic variants in KARS1"
+    },
+    {
+      "id": "6024a6871cb411341a0000a4",
+      "type": "factoid",
+      "body": "Which substance use is associated with Brodifacoum poisoning?"
+    },
+    {
+      "id": "621b4a223a8413c65300003a",
+      "type": "factoid",
+      "body": "What is Alphafold?"
+    },
+    {
+      "id": "621fc8513a8413c653000063",
+      "type": "list",
+      "body": "List diseases that are  repeat expansion disorders (REDs)."
+    },
+    {
+      "id": "621150333a8413c65300000e",
+      "type": "summary",
+      "body": "What is bb21217?"
+    },
+    {
+      "id": "61f81785882a024a1000003f",
+      "type": "summary",
+      "body": "Describe the syndrome that is caused by biallelic variants in HPDL"
+    },
+    {
+      "id": "61f5847b882a024a10000008",
+      "type": "factoid",
+      "body": "Which receptor is targeted by Spesolimab?"
+    },
+    {
+      "id": "6217dc9d3a8413c65300002d",
+      "type": "yesno",
+      "body": "Is NfL (neurofilament light chain) a biomarker of neurodegeneration?"
+    },
+    {
+      "id": "621ebec63a8413c65300005d",
+      "type": "yesno",
+      "body": "Is Epistaxis associated with dental implant placement?"
+    },
+    {
+      "id": "62058198c9dfcb9c09000030",
+      "type": "factoid",
+      "body": "What is the effect of grapefruit juice on CYP3A4?"
+    },
+    {
+      "id": "61f81857882a024a10000040",
+      "type": "factoid",
+      "body": "Which is the major clinical feature observed in FDXR-associated disease?"
+    },
+    {
+      "id": "61f58a1a882a024a10000009",
+      "type": "yesno",
+      "body": "Is Daprodustat effective for anemia?"
+    },
+    {
+      "id": "6217da133a8413c653000026",
+      "type": "factoid",
+      "body": "Where is the the protein perforin localized?"
+    },
+    {
+      "id": "621ecf1a3a8413c653000061",
+      "type": "factoid",
+      "body": "What is an exosome?"
+    },
+    {
+      "id": "621218353a8413c653000013",
+      "type": "yesno",
+      "body": "Is REGN5458 a single-targeted antibody?"
+    },
+    {
+      "id": "62190bac3a8413c653000034",
+      "type": "factoid",
+      "body": "Which disease is associated with X-linked recessive TLR7 deficiency?"
+    },
+    {
+      "id": "6020a7391cb411341a00007e",
+      "type": "yesno",
+      "body": "Is Benralizumab effective for Chronic Spontaneous Urticaria?"
+    },
+    {
+      "id": "6217dd013a8413c65300002f",
+      "type": "yesno",
+      "body": "Do the proteins Talin and Amot interact?"
+    },
+    {
+      "id": "6220cbf83a8413c653000067",
+      "type": "yesno",
+      "body": "Do RNA binding Proteins  that bind to adenine uridine (AU)-rich elements (AREs) in the 5\u0027 untranslated region (UTR) of mRNAs (AU-RBPs) regulate the DNA Damage Response?"
+    },
+    {
+      "id": "6211566a3a8413c653000010",
+      "type": "yesno",
+      "body": "Has CPX-351 been approved by the FDA and the EMA?"
+    },
+    {
+      "id": "620c2d743a8413c653000008",
+      "type": "summary",
+      "body": "What is the role of KAT7 in AML?"
+    },
+    {
+      "id": "6027549d1cb411341a0000ea",
+      "type": "list",
+      "body": "Which drugs are included in the CAPIRI regimen?"
+    },
+    {
+      "id": "621b45943a8413c653000039",
+      "type": "summary",
+      "body": "What is the p-crAssphage?"
+    },
+    {
+      "id": "62211ce03a8413c65300006e",
+      "type": "summary",
+      "body": "What is the function of Circular RNA (circRNA)?"
+    },
+    {
+      "id": "6206cfd5c9dfcb9c09000040",
+      "type": "factoid",
+      "body": "Which one was the first chromone in clinical use?"
+    },
+    {
+      "id": "605fb19794d57fd879000038",
+      "type": "factoid",
+      "body": "Which resource is used for visualisation of non-covalent contacts?"
+    },
+    {
+      "id": "60234dc61cb411341a000094",
+      "type": "factoid",
+      "body": "Which disease is treated with Emapalumab?"
+    },
+    {
+      "id": "6217dc173a8413c65300002b",
+      "type": "yesno",
+      "body": "Do we find bacteriophages in the gut?"
+    },
+    {
+      "id": "621fcaf93a8413c653000065",
+      "type": "factoid",
+      "body": "What is the function of the protein encoded by PUMILIO1?"
+    },
+    {
+      "id": "6211557b3a8413c65300000f",
+      "type": "summary",
+      "body": "What is CPX-351"
+    },
+    {
+      "id": "6028f5851cb411341a0000ff",
+      "type": "factoid",
+      "body": "What is the prevalence of the inactivating AKT variant p.Pro50Thr in the Finnish population?"
+    },
+    {
+      "id": "6025e3a71cb411341a0000bc",
+      "type": "list",
+      "body": "Which mutations are inhibited by Ripretinib?"
+    },
+    {
+      "id": "60490e321cb411341a000168",
+      "type": "summary",
+      "body": "What is known about the PYHIN proteins?"
+    },
+    {
+      "id": "621ec0313a8413c65300005e",
+      "type": "factoid",
+      "body": "What class of drugs is commonly associated with Drug-induced interstitial lung disease (DIILD)?"
+    },
+    {
+      "id": "6206b399c9dfcb9c09000039",
+      "type": "factoid",
+      "body": "What pathological phenotype could potentially concomitant pomegranate juice and rosuvastatin use cause?"
+    },
+    {
+      "id": "621911323a8413c653000038",
+      "type": "factoid",
+      "body": "Which tool has been developed to discover VNTR-associated deletions?"
+    },
+    {
+      "id": "601d6fe11cb411341a000033",
+      "type": "yesno",
+      "body": "Is tirabrutinib effective for lymphoma?"
+    }
+  ]
+}

@@ -1,1 +1,3 @@
-NLTK
+-e git+git://github.com/iacopy/pymed.git@436b5af0892ec8cd101c5dcd1d54c7a51f73a145#egg=pymed
+nltk>=3.6.7
+sentence-transformers>=2.1.0
