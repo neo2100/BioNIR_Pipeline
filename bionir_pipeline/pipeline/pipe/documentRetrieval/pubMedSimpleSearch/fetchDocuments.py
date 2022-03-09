@@ -14,8 +14,9 @@ def fetchDocuments(query, maxDocumentNumber):
     for index, article in enumerate(allDocs):
         # Sometimes article['pubmed_id'] contains list separated with comma - take first pubmedId in that list - thats article pubmedId
         pubmedId = article.pubmed_id.partition('\n')[0]
-        singleDocs.append({'id': str(index*2) + '-' + pubmedId+'-TI', 'text': article.title,
-                          'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId, 'type': "title"})
+        if(article.title):
+            singleDocs.append({'id': str(index*2) + '-' + pubmedId+'-TI', 'text': article.title,
+                              'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId, 'type': "title"})
         if(article.abstract):
             singleDocs.append({'id': str(index*2+1) + '-' + pubmedId+'-AB', 'text': article.abstract,
                               'directLink': "http://www.ncbi.nlm.nih.gov/pubmed/"+pubmedId, 'type': "abstract"})
