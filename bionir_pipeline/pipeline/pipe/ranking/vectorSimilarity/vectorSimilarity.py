@@ -4,9 +4,6 @@
 # Output: a list of "rankedDocuments" at least containing: "score", "id", "text", "directLink" and "type"
 # Output: a list of "rankedSnippets" at least containing: "score", "id", "text", "snippet", "directLink" and "type"
 
-from nltk.tokenize import sent_tokenize
-
-
 class VectorSimilarity:
 
     def __init__(self, parameters):
@@ -46,6 +43,7 @@ class VectorSimilarity:
             return input
 
         # make a list of all snippets and calculate the scores
+        self.allSnippets = []
         for document in input['documents']:
             if not 'sentencesEmbedded' in document:
                 print(
