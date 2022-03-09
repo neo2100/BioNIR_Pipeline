@@ -21,6 +21,7 @@ class PubMedSimpleSearch:
             self.query = input['query']
         else:
             print("ERROR: query is missing in the input for PubMedSimpleSearch")
+            self.query = ''
             return input
 
         input['documents'] = fetchDocuments(self.query, self.maxDocumentNumber)

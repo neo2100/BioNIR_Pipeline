@@ -34,6 +34,7 @@ class PubMedAdvancedSearch:
             self.query = input['query']
         else:
             print("ERROR: query is missing in the input for PubMedAdvancedSearch")
+            self.query = ''
             return input
 
         bestQueryString = self.findBestQueryString()
