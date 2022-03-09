@@ -30,16 +30,19 @@ class DocumentParser:
         file_to_terms = {}
 
         for doc in self.documents:
-            #read the whole text of a file into a single string with lowercase
-            file_to_terms[doc["id"]] = doc[self.textFieldKey].lower()
-            #subsitute all non-word characters with whitespace
-            pattern = re.compile('\W+')
-            file_to_terms[doc["id"]] = pattern.sub(' ', file_to_terms[doc["id"]])
-            # split text into words (tokenized list for a document)
-            file_to_terms[doc["id"]] = file_to_terms[doc["id"]].split()
-            # stemming words
-            stemmer = PorterStemmer()
-            file_to_terms[doc["id"]] = [stemmer.stem(w) for w in file_to_terms[doc["id"]] ]
+            if doc[self.textFieldKey] is not None:
+                #read the whole text of a file into a single string with lowercase
+                file_to_terms[doc["id"]] = doc[self.textFieldKey].lower()
+                #subsitute all non-word characters with whitespace
+                pattern = re.compile('\W+')
+                file_to_terms[doc["id"]] = pattern.sub(' ', file_to_terms[doc["id"]])
+                # split text into words (tokenized list for a document)
+                file_to_terms[doc["id"]] = file_to_terms[doc["id"]].split()
+                # stemming words
+                stemmer = PorterStemmer()
+                file_to_terms[doc["id"]] = [stemmer.stem(w) for w in file_to_terms[doc["id"]] ]
+            else:
+                print(doc)
               
         return file_to_terms
 
