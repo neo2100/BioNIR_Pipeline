@@ -70,7 +70,7 @@ class VectorSimilarity:
         self.allSnippets.sort(key=lambda x: x['score'], reverse=True)
 
         input['rankedSnippets'] = self.allSnippets[0:self.maxSnippetNumber]
-        input['rankedDocuments'] = self.rankDocumentsBasedOnRankedSnippets()
+        input['rankedDocuments'] = self.rankDocumentsBasedOnRankedSnippets()[0:self.maxDocumentNumber]
 
         return input
 
@@ -82,4 +82,7 @@ class VectorSimilarity:
 
     def rankDocumentsBasedOnRankedSnippets(self):
         rankedDocuments = []
+        for snippet in self.allSnippets:
+            if snippet['directLink'] not in rankedDocuments:
+                rankedDocuments.append(snippet['directLink'])
         return rankedDocuments

@@ -17,7 +17,8 @@ pipeline.push("VectorSimilarity as ranking", {
               'metricName': "dot-product", 'maxDocumentNumber': 2, 'maxSnippetNumber': 10})
 
 #print(pipeline.execute({'query': "Covid in Iran"}))
-output = pipeline.execute({'query': "Which markers are screened with the triple test for the detection of syndromes in fetus?"})
+output = pipeline.execute({'query': "What is the function of the exosome?"})
 #print(output)
 for snippet in output['rankedSnippets']:
     print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet'])
+print(output['rankedDocuments'])
