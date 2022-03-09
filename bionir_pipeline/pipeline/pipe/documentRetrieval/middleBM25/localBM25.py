@@ -2,7 +2,6 @@
 import pickle
 import re
 from nltk.stem import PorterStemmer 
-import math
 import os
 from .documentParser import DocumentParser
 
@@ -58,6 +57,8 @@ class LocalBM25:
         for w in qlist:
             if w not in self.file_to_terms[filename]:
                 continue
+            if w not in self.idf:
+                self.idf[w] = 10 # <-- default high value for rare items
             #print('the word: '+ w)
             wc = len(self.invertedIndex[w][filename])
             score += self.idf[w] * ((wc)* (self.k+1)) / (wc + self.k * 

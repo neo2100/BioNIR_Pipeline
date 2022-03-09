@@ -55,7 +55,10 @@ class QueryParser:
         inverseDict = {}
         for w in list:
             wStemmed = stemmer.stem(w)
-            inverseDict[w] = self.idf[wStemmed]
+            if wStemmed in self.idf:
+                inverseDict[w] = self.idf[wStemmed]
+            else:
+                inverseDict[w] = 10 # <-- default high value for rare items
         return inverseDict
 
 
