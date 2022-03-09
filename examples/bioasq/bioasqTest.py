@@ -26,10 +26,14 @@ with open(abs_file_path, 'rb') as document_file:
     questions = json.load(document_file)['questions']
     document_file.close()
 
+# saving outputs in a file
+script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
+abs_file_path = os.path.join(script_dir, (inputFileName+'_output'))
+
 # executing pipeline and generate outputs
 outputQuestions = []
-for question in questions:
-    print("starting pipeline for: ", question['body'])
+for index, question in enumerate(questions):
+    print("starting pipeline for: ", index, question['body'])
     output = pipeline.execute({'query': question['body']})
     snippets = []
     for snippet in output['rankedSnippets']:
@@ -46,10 +50,15 @@ for question in questions:
         'type': question['type'],
         'body': question['body'],
     })
+    
+    # saving outputs in a file    
+    with open(abs_file_path, 'w', encoding='utf-8') as document_file:
+        json.dump({'questions': outputQuestions},
+                  document_file, ensure_ascii=False, indent=4)
 
 # saving outputs in a file
-script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-abs_file_path = os.path.join(script_dir, (inputFileName+'_output'))
-with open(abs_file_path, 'w', encoding='utf-8') as document_file:
-    json.dump({'questions': outputQuestions},
-              document_file, ensure_ascii=False, indent=4)
+# script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
+#abs_file_path = os.path.join(script_dir, (inputFileName+'_output'))
+# with open(abs_file_path, 'w', encoding='utf-8') as document_file:
+#    json.dump({'questions': outputQuestions},
+#              document_file, ensure_ascii=False, indent=4)
