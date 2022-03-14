@@ -21,6 +21,7 @@ pipeline.push("SBERT as embedding", {
               'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
 pipeline.push("VectorSimilarity as ranking", {
               'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+pipeline.push("SnippetBeginEndOffset as utility", {})
 
 # preparing inputs
 questions = {}

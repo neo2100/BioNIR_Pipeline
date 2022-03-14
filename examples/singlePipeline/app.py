@@ -22,6 +22,6 @@ output = pipeline.execute({'query': "Which factor is inhibited by Milvexian?"})
 #print(output)
 for snippet in output['rankedSnippets']:
     print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet']
-     + ", offsetInBeginSection: " + snippet['offsetInBeginSection']
-      + ", offsetInEndSection: " + snippet['offsetInEndSection'])
+     + ", offsetInBeginSection: " + str(snippet['offsetInBeginSection'])
+      + ", offsetInEndSection: " + str(snippet['offsetInEndSection']))
 print(output['rankedDocuments'])

@@ -4,7 +4,7 @@
 
 from .snippetBeginEndOffset.snippetBeginEndOffset import SnippetBeginEndOffset
 
-class Ranking:
+class Utility:
 
     def __init__(self, utilityType, paramaters):
         self.utilityType = utilityType
