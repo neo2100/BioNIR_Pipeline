@@ -15,17 +15,13 @@ pipeline.push("SBERT as embedding", {
               'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
 pipeline.push("VectorSimilarity as ranking", {
               'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+pipeline.push("SnippetBeginEndOffset as utility", {})
 
 #print(pipeline.execute({'query': "Covid in Iran"}))
-output = pipeline.execute({'query': "Is ALS a heritable disease?"})
+output = pipeline.execute({'query': "Which factor is inhibited by Milvexian?"})
 #print(output)
 for snippet in output['rankedSnippets']:
-    print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet'])
-print(output['rankedDocuments'])
-
-#print(pipeline.execute({'query': "Covid in Iran"}))
-output = pipeline.execute({'query': "What is ARNIL?"})
-#print(output)
-for snippet in output['rankedSnippets']:
-    print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet'])
+    print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet']
+     + ", offsetInBeginSection: " + str(snippet['offsetInBeginSection'])
+      + ", offsetInEndSection: " + str(snippet['offsetInEndSection']))
 print(output['rankedDocuments'])

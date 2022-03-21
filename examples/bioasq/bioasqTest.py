@@ -1,5 +1,9 @@
 # define defferent piplines and connect them to evaluators and run tests.
 # A minimum pipeline is including: a documentRetrieval, a sentenceSplitting, an embedding, and a ranking pipe
+
+# Bioasq-basic: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 100
+# Bioasq-basic-mid: maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500, 'maxDocumentNumber': 200
+
 from bionir_pipeline import Pipeline
 import os
 import json
@@ -10,13 +14,14 @@ pipeline = Pipeline()
 
 # NOTE: while pushing pipes, the order is important
 pipeline.push("PubMedAdvancedSearch as documentRetrieval", {
-              'maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500})
+              'maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500})
 pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
 pipeline.push("SentenceSplittingByNLTK as preprocessing", {})
 pipeline.push("SBERT as embedding", {
               'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
 pipeline.push("VectorSimilarity as ranking", {
               'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+pipeline.push("SnippetBeginEndOffset as utility", {})
 
 # preparing inputs
 questions = {}
@@ -50,7 +55,7 @@ for index, question in enumerate(questions):
         'type': question['type'],
         'body': question['body'],
     })
-    
+
     # saving outputs in a file    
     with open(abs_file_path, 'w', encoding='utf-8') as document_file:
         json.dump({'questions': outputQuestions},

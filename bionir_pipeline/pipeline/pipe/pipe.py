@@ -16,6 +16,7 @@ from .documentRetrieval.documentRetrieval import DocumentRetrieval
 from .preprocessing.preprocessing import Preprocessing
 from .embedding.embedding import Embedding
 from .ranking.ranking import Ranking
+from .utility.utility import Utility
 
 class Pipe:
     def __init__(self, pipeName, parameters):
@@ -31,6 +32,8 @@ class Pipe:
             self.pipe = Embedding(pipeType[0], parameters)
         elif pipeType[1] == "ranking":
             self.pipe = Ranking(pipeType[0], parameters)
+        elif pipeType[1] == "utility":
+            self.pipe = Utility(pipeType[0], parameters)
 
     def execute(self, input):
         return self.pipe.execute(input)
