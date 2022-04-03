@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "61f50f8b882a024a10000001",
+      "type": "summary",
+      "body": "Describe the application of whole genome sequencing in the diagnosis of primary ciliary dyskinesia (PCD)"
+    },
+    {
+      "id": "6020a8431cb411341a00007f",
+      "type": "factoid",
+      "body": "Which CD38 antibody has been shown to be effective for Lupus Erythematosus?"
+    },
+    {
+      "id": "60853db94e6a4cf630000010",
+      "type": "factoid",
+      "body": "What is a circRNA?"
+    },
+    {
+      "id": "62211b5a3a8413c65300006b",
+      "type": "summary",
+      "body": "Summarize Fanconi\u0027s anemia"
+    },
+    {
+      "id": "6211454a3a8413c65300000b",
+      "type": "factoid",
+      "body": "Which one of the CYP450 enzymes is the second most frequently implicated in the metabolism of the drugs currently available on the market?"
+    },
+    {
+      "id": "62190f633a8413c653000037",
+      "type": "summary",
+      "body": "Describe SBGNview"
+    },
+    {
+      "id": "61f5f1ef882a024a10000015",
+      "type": "list",
+      "body": "Which diseases can be treated with Itepekimab?"
+    },
+    {
+      "id": "603534671cb411341a000153",
+      "type": "factoid",
+      "body": "What is the msDNA?"
+    },
+    {
+      "id": "621ea5a53a8413c653000055",
+      "type": "yesno",
+      "body": "Are Epoxyeicosatrienoic acids (EETs) synthesized by cytochrome P450 epoxygenases from arachidonic acid?"
+    },
+    {
+      "id": "621142713a8413c65300000a",
+      "type": "factoid",
+      "body": "What percentage of currently available drugs are metabolized by CYP3A4?"
+    },
+    {
+      "id": "61f810a5882a024a1000003e",
+      "type": "factoid",
+      "body": "What is caused by bi-allelic loss-of-function variants in IPO8?"
+    },
+    {
+      "id": "6023415b1cb411341a00008c",
+      "type": "summary",
+      "body": "What is the mechanism of action of Evinacumab?"
+    },
+    {
+      "id": "6056fef294d57fd87900001f",
+      "type": "factoid",
+      "body": "Which glands in the bee secretes royal jelly?"
+    },
+    {
+      "id": "622122683a8413c653000075",
+      "type": "list",
+      "body": "List the common retinal diseases associated with circRNAs."
+    },
+    {
+      "id": "620bedb13a8413c653000004",
+      "type": "summary",
+      "body": "How do CYP1A2 polymorphisms affect the habitual coffee consumption effect on apetite?"
+    },
+    {
+      "id": "620be7613a8413c653000003",
+      "type": "summary",
+      "body": "What is the role of SDE2?"
+    },
+    {
+      "id": "602738ac1cb411341a0000d7",
+      "type": "list",
+      "body": "Which drugs are included in the CABENUVA pill?"
+    },
+    {
+      "id": "60805f0c4e6a4cf630000003",
+      "type": "summary",
+      "body": "What is Shone\u0027s complex?"
+    },
+    {
+      "id": "621eb1d83a8413c653000059",
+      "type": "list",
+      "body": "What methods are used to diagnose bowel endometriosis?"
+    },
+    {
+      "id": "621145c63a8413c65300000c",
+      "type": "factoid",
+      "body": "When did FDA approve the first B-cell maturation antigen-targeted CAR-T cell therapy?"
+    },
+    {
+      "id": "62128c503a8413c653000018",
+      "type": "summary",
+      "body": "Describe the N6-methyladenosine RNA modification in AML"
+    },
+    {
+      "id": "6027446d1cb411341a0000dd",
+      "type": "yesno",
+      "body": "Does trimetazidine protect from myocardial injury after percutaneous coronary intervention?"
+    },
+    {
+      "id": "6049173d1cb411341a00016b",
+      "type": "factoid",
+      "body": "When is the drug Ivermectin used?"
+    },
+    {
+      "id": "6221468d3a8413c653000076",
+      "type": "summary",
+      "body": "What is the function of aa DEAD box protein"
+    },
+    {
+      "id": "6206b740c9dfcb9c0900003b",
+      "type": "factoid",
+      "body": "What is the effect of rHDL-apoE3 on vascular permeability?"
+    },
+    {
+      "id": "6217bf6a3a8413c65300001d",
+      "type": "factoid",
+      "body": "What is inhibited by TH1579?"
+    },
+    {
+      "id": "60281e461cb411341a0000f4",
+      "type": "summary",
+      "body": "What is the mechanism of action of Gemogenovatucel-T?"
+    },
+    {
+      "id": "606b32af94d57fd879000060",
+      "type": "factoid",
+      "body": "What is the Versene Solution used for?"
+    },
+    {
+      "id": "62211d6f3a8413c65300006f",
+      "type": "yesno",
+      "body": "Are circRNAs susceptible to degradation by RNase R?"
+    },
+    {
+      "id": "62057f1ec9dfcb9c0900002e",
+      "type": "yesno",
+      "body": "Does atemoya juice inhibit tye CYP3A4 enzyme?"
+    },
+    {
+      "id": "61f7fca6882a024a10000039",
+      "type": "list",
+      "body": "Which processes are affected by pathogenic SPTBN1 variants?"
+    },
+    {
+      "id": "601c40bb1cb411341a00001a",
+      "type": "summary",
+      "body": "Describe the role of bevacizumab in radiosurgery for arteriovenous malformation."
+    },
+    {
+      "id": "6217db763a8413c653000028",
+      "type": "yesno",
+      "body": "Is Mycobacterium abscessus a human pathogen?"
+    },
+    {
+      "id": "621ebb733a8413c65300005c",
+      "type": "factoid",
+      "body": "What is the indication for Favipiravir?"
+    },
+    {
+      "id": "62121c583a8413c653000016",
+      "type": "yesno",
+      "body": "Is MEDI2228 a bispecific antibody?"
+    },
+    {
+      "id": "61f56284882a024a10000005",
+      "type": "factoid",
+      "body": "Which syndrome is caused by pathogenic COL4A3-COL4A5 variants?"
+    },
+    {
+      "id": "601c4ff61cb411341a000022",
+      "type": "yesno",
+      "body": "Is proton beam therapy used for treatment of craniopharyngioma?"
+    },
+    {
+      "id": "606b30e094d57fd87900005f",
+      "type": "list",
+      "body": "What are the phases of hair follicle cycle?"
+    },
+    {
+      "id": "60292d311cb411341a00010f",
+      "type": "summary",
+      "body": "What is the cause of Bow Hunter\u0027s syndrome?"
+    },
+    {
+      "id": "621215ec3a8413c653000012",
+      "type": "list",
+      "body": "What types of anti-tumor therapeutic antibodies are available?"
+    },
+    {
+      "id": "61f52f22882a024a10000002",
+      "type": "factoid",
+      "body": "Which disease do pathogenic NR2F1 variants cause?"
+    },
+    {
+      "id": "6020b5681cb411341a000088",
+      "type": "factoid",
+      "body": "Which mutation is targeted by Tepotinib?"
+    },
+    {
+      "id": "6032874f1cb411341a000143",
+      "type": "list",
+      "body": "List second messengers."
+    },
+    {
+      "id": "601d73261cb411341a00003a",
+      "type": "yesno",
+      "body": "Is there a genetic cause of craniostenosis?"
+    },
+    {
+      "id": "620586a8c9dfcb9c09000032",
+      "type": "yesno",
+      "body": "Can bergapten cross the blood-brain barrier?"
+    },
+    {
+      "id": "620be4fd3a8413c653000002",
+      "type": "yesno",
+      "body": "Does TIMELESS-TIPIN participate in replisome disassembly?"
+    },
+    {
+      "id": "602354e41cb411341a000098",
+      "type": "factoid",
+      "body": "Nemolizumab has been shown to be effective for which disease?"
+    },
+    {
+      "id": "60570fe494d57fd879000026",
+      "type": "yesno",
+      "body": "Is hemoglobin antimicrobial?"
+    },
+    {
+      "id": "603bc3181cb411341a00015c",
+      "type": "factoid",
+      "body": "What is the mammalian version of arginine vasotocin?"
+    },
+    {
+      "id": "6206bf3cc9dfcb9c0900003d",
+      "type": "factoid",
+      "body": "Which kinase does PD98059 inhibit?"
+    },
+    {
+      "id": "61f80e22882a024a1000003d",
+      "type": "factoid",
+      "body": "What is caused by loss-of-function variants in BCAS3?"
+    },
+    {
+      "id": "601c287f1cb411341a000012",
+      "type": "list",
+      "body": "Which transporter is inhibited by Sotagliflozin?"
+    },
+    {
+      "id": "6217d8f03a8413c653000021",
+      "type": "factoid",
+      "body": "What is the main use of ETD fragmentation?"
+    },
+    {
+      "id": "6060915b94d57fd879000044",
+      "type": "summary",
+      "body": "What is Bartter syndrome?"
+    },
+    {
+      "id": "620588f9c9dfcb9c09000033",
+      "type": "yesno",
+      "body": "Can bergapten cause phototoxicity?"
+    },
+    {
+      "id": "61f52fca882a024a10000003",
+      "type": "list",
+      "body": "Which syndromes are caused by LAMA1 mutations?"
+    },
+    {
+      "id": "602344ab1cb411341a00008e",
+      "type": "summary",
+      "body": "What is the use of Lactin-V?"
+    },
+    {
+      "id": "60329dc11cb411341a000147",
+      "type": "factoid",
+      "body": "What is Congo red agar plates used for?"
+    },
+    {
+      "id": "601db4ac1cb411341a000048",
+      "type": "factoid",
+      "body": "What is the protein that is truncated to produce progerin?"
+    },
+    {
+      "id": "62114bd93a8413c65300000d",
+      "type": "summary",
+      "body": "What are the effects of ibrutinib on CART cell production?"
+    },
+    {
+      "id": "605794c294d57fd87900002d",
+      "type": "summary",
+      "body": "What is the role of miR-193b in prostate cancer?"
+    },
+    {
+      "id": "602357ff1cb411341a00009a",
+      "type": "factoid",
+      "body": "What treatment was studied in the KEYNOTE-522 trial?"
+    },
+    {
+      "id": "6081b0b44e6a4cf630000009",
+      "type": "factoid",
+      "body": "Which disease is associated with DNAJB1-PRKACA fusion gene?"
+    },
+    {
+      "id": "601eaaf61cb411341a000052",
+      "type": "summary",
+      "body": "What is NTI, Nerve Tissue Contrast Index"
+    },
+    {
+      "id": "606b75c194d57fd87900006c",
+      "type": "factoid",
+      "body": "When was dupilumab approved by EMA?"
+    },
+    {
+      "id": "601ffd571cb411341a000079",
+      "type": "summary",
+      "body": "Describe bigPint"
+    },
+    {
+      "id": "61f5914e882a024a1000000d",
+      "type": "factoid",
+      "body": "Aducanumab can be used for treatment of which disease?"
+    },
+    {
+      "id": "6217d9bf3a8413c653000024",
+      "type": "yesno",
+      "body": "Can IFNg induce the expression of IDO?"
+    },
+    {
+      "id": "601efe051cb411341a00006a",
+      "type": "factoid",
+      "body": "Covid-19 is though to have arisen from what species?"
+    },
+    {
+      "id": "602c2ade1cb411341a000124",
+      "type": "yesno",
+      "body": "Are TAMs good anticancer therapeutic targets?"
+    },
+    {
+      "id": "620c2f4f3a8413c653000009",
+      "type": "summary",
+      "body": "Describe meCLICK-Seq"
+    },
+    {
+      "id": "61f5bef2882a024a10000011",
+      "type": "summary",
+      "body": "What is the mechanism of action of Lumasiran?"
+    },
+    {
+      "id": "6049080c1cb411341a000164",
+      "type": "factoid",
+      "body": "Where are Goblet cells localized?"
+    },
+    {
+      "id": "621e9e7b3a8413c653000054",
+      "type": "summary",
+      "body": "What is OHRQoL?"
+    },
+    {
+      "id": "606a296394d57fd87900004e",
+      "type": "list",
+      "body": "Which VKORC1 genotypes are associated with a need for lower warfarin maintenance dose?"
+    },
+    {
+      "id": "601ec0c91cb411341a00005f",
+      "type": "list",
+      "body": "Which R/bioconductor have been developed for copy number analysis?"
+    },
+    {
+      "id": "6027434c1cb411341a0000dc",
+      "type": "yesno",
+      "body": "Is gabapentin effective for chronic pelvic pain?"
+    },
+    {
+      "id": "6056fbfc94d57fd87900001d",
+      "type": "yesno",
+      "body": "Does the royal jelly contain proteins?"
+    },
+    {
+      "id": "601dbe101cb411341a00004c",
+      "type": "factoid",
+      "body": "What is the brand name for erenumab?"
+    },
+    {
+      "id": "606b7d6c94d57fd87900006f",
+      "type": "factoid",
+      "body": "Which protein does capmatinib bind?"
+    },
+    {
+      "id": "60281b1c1cb411341a0000f3",
+      "type": "list",
+      "body": "Which neuropsychiatric disorders are associated with 16p13.11 genomic copy number variants?"
+    },
+    {
+      "id": "61f575f7882a024a10000007",
+      "type": "summary",
+      "body": "What is carcinoma en cuirasse?"
+    },
+    {
+      "id": "6082f0ec4e6a4cf63000000e",
+      "type": "factoid",
+      "body": "What is carboxyglutamate?"
+    },
+    {
+      "id": "601ef7cf1cb411341a000068",
+      "type": "summary",
+      "body": "What is Morton\u0027s Neuroma?"
+    },
+    {
+      "id": "606bff2194d57fd879000075",
+      "type": "factoid",
+      "body": "Which company produces the HercepTest?"
+    },
+    {
+      "id": "6217c0b63a8413c65300001e",
+      "type": "yesno",
+      "body": "Does UBE4B promote renal cancer?"
+    },
+    {
+      "id": "6025d9e41cb411341a0000b7",
+      "type": "yesno",
+      "body": "Does addition of valproic acid improve survival of patients with diffuse intrinsic pontine glioma?"
+    },
+    {
+      "id": "6217dccc3a8413c65300002e",
+      "type": "list",
+      "body": "List the main protein families found in human tears?"
+    },
+    {
+      "id": "601ff4021cb411341a000075",
+      "type": "factoid",
+      "body": "In what year did Gregor Mendel die?"
+    },
+    {
+      "id": "6026dc481cb411341a0000d0",
+      "type": "list",
+      "body": "List 4 monoclonal antibodies in development for the prevention of migraine."
+    }
+  ]
+}

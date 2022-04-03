@@ -9,7 +9,9 @@ pipeline = Pipeline()
 # NOTE: while pushing pipes, the order is important
 #pipeline.push("PubMedSimpleSearch as documentRetrieval", {'maxDocumentNumber': 2})
 pipeline.push("PubMedAdvancedSearch as documentRetrieval", {'maxAroundDocumentNumber': 500,'fetchMaxDocumentNumber':1500})
-pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
+pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 10})
+pipeline.push("CoreferenceResolverByKGen as preprocessing", {})
+pipeline.push("AbbreviationResolverByKGen as preprocessing", {})
 pipeline.push("SentenceSplittingByNLTK as preprocessing", {})
 pipeline.push("SBERT as embedding", {
               'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
@@ -18,10 +20,11 @@ pipeline.push("VectorSimilarity as ranking", {
 pipeline.push("SnippetBeginEndOffset as utility", {})
 
 #print(pipeline.execute({'query': "Covid in Iran"}))
-output = pipeline.execute({'query': "Which factor is inhibited by Milvexian?"})
+output = pipeline.execute({'query': "Is the protein HOXA11 associated with endometrial disease?"})
 #print(output)
 for snippet in output['rankedSnippets']:
     print("score: " + str(snippet["score"]) + ", id: " + str(snippet["id"]) + ", snippet: " + snippet['snippet']
      + ", offsetInBeginSection: " + str(snippet['offsetInBeginSection'])
       + ", offsetInEndSection: " + str(snippet['offsetInEndSection']))
 print(output['rankedDocuments'])
+

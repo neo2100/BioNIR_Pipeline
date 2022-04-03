@@ -61,6 +61,7 @@ class BioasqTaskBPhaseA:
 
             #if recall==0:
             #    print(index, recall, goldenQuestion["body"])
+            modelQuestions[index]['documentEvaluation'] = {'precision': precision, 'recall': recall, 'f_measure': fMeasure}
 
         return {'precision': (totalPrecision/count), 'recall': (totalRecall/count),
                 'f_measure': (totalFMeasure/count)}
@@ -105,6 +106,8 @@ class BioasqTaskBPhaseA:
 
             #if recall==0:
             #    print(index,recall, goldenQuestion["body"])
+            
+            modelQuestions[index]['snippetEvaluation'] = {'precision': precision, 'recall': recall, 'f_measure': fMeasure}
 
         return {'precision': (totalPrecision/count), 'recall': (totalRecall/count),
                 'f_measure': (totalFMeasure/count)}
