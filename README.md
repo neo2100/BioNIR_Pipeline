@@ -3,6 +3,9 @@ Explainable Neural Information Retrieval in Biomedical Science (BioNIR) _ Inform
 
 It is an ongoing project to create an bio information retrieval in pipeline framework and easy to reconfigure. Please feel free to contact here or in LinkedIn if you are interested to collaborate.
 
+
+It is an ongoing project to create an bio information retrieval in pipeline framework and easy to reconfigure. Please feel free to contact here or in LinkedIn if you are interested to collaborate.
+
 To Do
 -----
 -   Install package via: pip install -e .
