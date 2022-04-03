@@ -2,20 +2,27 @@
 # A minimum pipeline is including: a documentRetrieval, a sentenceSplitting, an embedding, and a ranking pipe
 
 # Bioasq-basic: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 100
-# Bioasq-basic-mid: maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500, 'maxDocumentNumber': 200
+# Bioasq-basic-mid2: maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500, 'maxDocumentNumber': 200 (Test1)
+# Bioasq-basic-mid3: maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500, 'maxDocumentNumber': 100
+# Bioasq-basic-mid4: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 50
+# Bioasq-basic-mid5: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 25
+# Bioasq-basic-mid6: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 75
+# Bioasq-basic-mid7: maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500, 'maxDocumentNumber': 125 (Test2) (svectorSimilarity-> docs only from best 10 snippests)
 
 from bionir_pipeline import Pipeline
 import os
 import json
-inputFileName = 'BioASQ-task10bPhaseA-testset1'
+inputFileName = 'BioASQ-task10bPhaseA-testset2'
 
 
 pipeline = Pipeline()
 
 # NOTE: while pushing pipes, the order is important
 pipeline.push("PubMedAdvancedSearch as documentRetrieval", {
-              'maxAroundDocumentNumber': 700, 'fetchMaxDocumentNumber': 2500})
+              'maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 1500})
 pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
+#pipeline.push("CoreferenceResolverByKGen as preprocessing", {})
+#pipeline.push("AbbreviationResolverByKGen as preprocessing", {})
 pipeline.push("SentenceSplittingByNLTK as preprocessing", {})
 pipeline.push("SBERT as embedding", {
               'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
@@ -46,7 +53,9 @@ for index, question in enumerate(questions):
             'beginSection': snippet['type'],
             'endSection': snippet['type'],
             'text': snippet['snippet'],
-            'document': snippet['directLink']
+            'document': snippet['directLink'],
+            'offsetInBeginSection': snippet['offsetInBeginSection'],
+            'offsetInEndSection': snippet['offsetInEndSection']
         })
     outputQuestions.append({
         'documents': output['rankedDocuments'],

@@ -80,7 +80,7 @@ class VectorSimilarity:
 
     def rankDocumentsBasedOnRankedSnippets(self):
         rankedDocuments = []
-        for snippet in self.allSnippets:
+        for snippet in self.allSnippets[0:self.maxSnippetNumber]:
             if snippet['directLink'] not in rankedDocuments:
                 rankedDocuments.append(snippet['directLink'])
         return rankedDocuments
