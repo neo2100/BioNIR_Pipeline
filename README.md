@@ -21,7 +21,7 @@ To add extra models move them to the root folder of the core.
 
 You can use this command to run the server:
 ```
-java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -preload tokenize,ssplit,pos,lemma,ner,depparse,parse,coref -status_port 9000 -port 9000 -timeout 300000
+java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -preload tokenize,ssplit,pos,lemma,ner,parse,coref -status_port 9000 -port 9000 -timeout 300000
 ```
 
 References
