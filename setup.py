@@ -4,7 +4,6 @@
 
 from setuptools import setup, find_packages
 
-
 with open('README.md') as f:
     readme = f.read()
 
@@ -12,10 +11,13 @@ with open('LICENSE') as f:
     license = f.read()
 
 REQUIRED = [
-    '-e git+git://github.com/iacopy/pymed.git@436b5af0892ec8cd101c5dcd1d54c7a51f73a145#egg=pymed',
-    'nltk>=3.6.7',
-    'sentence-transformers>=2.1.0'
+    'pymed@git+https://github.com/iacopy/pymed.git@fork-fixes',
+    'nltk',
+    'sentence-transformers>=2.1.0',
+    'stanfordcorenlp'
 ]
+
+DEPENDENCIES = ['git+https://github.com/iacopy/pymed.git@fork-fixes#egg=pymed']
 
 setup(
     name='bionir_pipeline',
@@ -27,5 +29,11 @@ setup(
     url='https://github.com/neo2100/BioNIR_Pipeline',
     license=license,
     packages=find_packages(exclude=('tests', 'examples', 'docs')),
-    install_requires=REQUIRED
+    install_requires=REQUIRED,
+    dependency_links=DEPENDENCIES
 )
+
+# NLTK Initializing
+import nltk
+nltk.download("stopwords")
+nltk.download("punkt")
