@@ -2,7 +2,7 @@ from nltk.tree import ParentedTree
 #from sys import path
 
 #path.insert(0, '../')
-from bionir_pipeline.common.stanfordcorenlp.corenlpwrapper import CoreNLPWrapper
+#from bionir_pipeline.common.stanfordcorenlp.corenlpwrapper import CoreNLPWrapper
 
 class AbbrevResolver:
 

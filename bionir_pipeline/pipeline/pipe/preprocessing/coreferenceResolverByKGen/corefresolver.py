@@ -78,6 +78,8 @@ class CorefResolver:
                 if replacement is None:
                     resolved += token['originalText'] + ' '
                 elif not replacement is '':
+                    # Modified by Neo2100, extract coreNLP for perforamnce (keep changes in annotated)
+                    token['originalText'] = replacement
                     resolved += replacement + ' '
 
         return resolved
