@@ -20,7 +20,9 @@ class SimplifierByKGen:
                 print("ERROR: sentences is missing in a document in documents for SimplifierByKGen")
                 return input
 
-            document['originalSentences'] = document['sentences'] 
+            if not 'originalSentences' in document:
+                document['originalSentences'] = document['sentences']
+                
             document['sentences'] = Simplifier(document['sentences']).simplify()
 
         return input
