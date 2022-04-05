@@ -55,11 +55,21 @@ class VectorSimilarity:
                 return input
 
             for index, sentenceEmbedded in enumerate(document['sentencesEmbedded']):
+                if 'originalText' in document:
+                    text = document['originalText']
+                else:
+                    text = document['text']
+
+                if 'originalSentences' in document:
+                    snippet = document['originalSentences'][index]
+                else:
+                    snippet = document['sentences'][index]
+
                 self.allSnippets.append({
                     'score': self.dotProductSimilarity(input['queryEmbedded'], sentenceEmbedded),
-                    'snippet': document['sentences'][index],
+                    'snippet': snippet,
                     'id': document['id'],
-                    'text': document['text'],
+                    'text': text,
                     'directLink': document['directLink'],
                     'type': document['type'],
                 })
