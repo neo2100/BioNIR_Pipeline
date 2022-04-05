@@ -32,7 +32,7 @@ class AbbrevResolver:
             for sub_tree in parse_tree.subtrees():
                 if sub_tree.label() == 'PRN':
                     # Modified by Neo2100 as it doesn't work for several examples
-                    if True:#sub_tree.parent().label() == 'NP' and sub_tree.left_sibling().label() == 'NP':
+                    if sub_tree.left_sibling():#sub_tree.parent().label() == 'NP' and sub_tree.left_sibling().label() == 'NP':
                         abbrev = ' '.join(sub_tree.leaves()).strip()
                         abbrev = abbrev[abbrev.find('-LRB-') + 5:abbrev.find('-RRB-')].strip()
 
@@ -52,6 +52,9 @@ class AbbrevResolver:
                 if token['word'] in abbrev_refs:
                     # Modified by Neo2100 to add abbreviation beside the resolved one
                     resolved_contents += abbrev_refs[token['word']] + ' ('+token['word']+') '
+                elif token['originalText'] in abbrev_refs:
+                    # Modified by Neo2100 to condsider if original text have it
+                    resolved_contents += abbrev_refs[token['originalText']] + ' ('+token['originalText']+') '
                 else:
                     resolved_contents += token['originalText'] + ' '
         # Modified by Neo2100 to add abbreviation beside the resolved one
