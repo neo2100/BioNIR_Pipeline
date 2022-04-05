@@ -1,7 +1,8 @@
-# Input:  a list of "documents" at least containing: "text"
-# Output: a list of "documents" at least containing: "text"
+# Input:  a list of "documents" at least containing: "text", "annotated"
+# Output: a list of "documents" at least containing: "text", "originalText"
 
 from .abbrevresolver import AbbrevResolver
+
 
 class AbbreviationResolverByKGen:
 
@@ -12,13 +13,25 @@ class AbbreviationResolverByKGen:
 
     def execute(self, input):
         if not 'documents' in input:
-            print("ERROR: documents is missing in the input for AbbreviationResolverByKGen")
+            print(
+                "ERROR: documents is missing in the input for AbbreviationResolverByKGen")
             return input
-        
+
         for document in input['documents']:
-            document['text'] = AbbrevResolver(document['text']).resolve()
+            if not 'text' in document:
+                print(
+                    "ERROR: text is missing in a document in documents for AbbreviationResolverByKGen")
+                return input
+            if not 'annotated' in document:
+                print(
+                    "ERROR: annotated is missing in a document in documents for AbbreviationResolverByKGen")
+                return input
+
+            if not 'originalText' in document:
+                document['originalText'] = document['text']
+
+            document['text'] = AbbrevResolver(document['annotated']).resolve()
 
         return input
 
-
-    #def refineDocuments(self):
+    # def refineDocuments(self):

@@ -1,7 +1,8 @@
-# Input:  a list of "documents" at least containing: "text"
-# Output: a list of "documents" at least containing: "text"
+# Input:  a list of "documents" at least containing: "text", "annotated"
+# Output: a list of "documents" at least containing: "text", "originalText"
 
 from .corefresolver import CorefResolver
+
 
 class CoreferenceResolverByKGen:
 
@@ -12,13 +13,25 @@ class CoreferenceResolverByKGen:
 
     def execute(self, input):
         if not 'documents' in input:
-            print("ERROR: documents is missing in the input for CoreferenceResolverByKGen")
+            print(
+                "ERROR: documents is missing in the input for CoreferenceResolverByKGen")
             return input
-        
+
         for document in input['documents']:
-            document['text'] = CorefResolver(document['text']).resolve()
+            if not 'text' in document:
+                print(
+                    "ERROR: text is missing in a document in documents for CoreferenceResolverByKGen")
+                return input
+            if not 'annotated' in document:
+                print(
+                    "ERROR: annotated is missing in a document in documents for CoreferenceResolverByKGen")
+                return input
+
+            if not 'originalText' in document:
+                document['originalText'] = document['text']
+
+            document['text'] = CorefResolver(document['annotated']).resolve()
 
         return input
 
-
-    #def refineDocuments(self):
+    # def refineDocuments(self):

@@ -8,8 +8,9 @@ class AbbrevResolver:
 
     __contents = ''
 
-    def __init__(self, contents):
-        self.__contents = contents
+    def __init__(self, annotated):
+        # Modified by Neo2100, extract coreNLP for perforamnce
+        self.annotated = annotated
 
     def resolve(self, verbose=False):
         if verbose:
@@ -20,11 +21,12 @@ class AbbrevResolver:
         if verbose:
             print('Using Stanford parser')
 
-        nlp = CoreNLPWrapper()
-        annotated = nlp.annotate(self.__contents, properties={'annotators': 'tokenize, ssplit, pos, lemma, ner, parse'})
+        # Modified by Neo2100, extract coreNLP for perforamnce
+        # nlp = CoreNLPWrapper()
+        # annotated = nlp.annotate(self.__contents, properties={'annotators': 'tokenize, ssplit, pos, lemma, ner, parse'})
 
         abbrev_refs = {}
-        for sentence in annotated['sentences']:
+        for sentence in self.annotated['sentences']:
             parsed = sentence['parse'].replace('\n', '')
             parse_tree = ParentedTree.fromstring(parsed)
             for sub_tree in parse_tree.subtrees():
@@ -45,7 +47,7 @@ class AbbrevResolver:
                             abbrev_refs[abbrev[:-1]] = reference[:-1]
 
         resolved_contents = ''
-        for sentence in annotated['sentences']:
+        for sentence in self.annotated['sentences']:
             for token in sentence['tokens']:
                 if token['word'] in abbrev_refs:
                     # Modified by Neo2100 to add abbreviation beside the resolved one

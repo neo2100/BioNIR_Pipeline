@@ -1,27 +1,30 @@
 #from sys import path
 
 #path.insert(0, '../')
-from bionir_pipeline.common.stanfordcorenlp.corenlpwrapper import CoreNLPWrapper
+#from bionir_pipeline.common.stanfordcorenlp.corenlpwrapper import CoreNLPWrapper
 
 class CorefResolver:
 
     __contents = ''
 
-    def __init__(self, contents):
-        self.__contents = contents
+    def __init__(self, annotated):
+        # Modified by Neo2100, extract coreNLP for perforamnce
+        self.annotated = annotated
 
     def resolve(self, verbose=False):
-        print('Resolving coreferences - please wait, as it may take a while ...')
+        if verbose:
+            print('Resolving coreferences - please wait, as it may take a while ...')
         return self.__stanford_coref(verbose)
 
     def __stanford_coref(self, verbose=False):
         if verbose:
             print('Using Stanford corefs')
 
-        nlp = CoreNLPWrapper()
-        annotated = nlp.annotate(self.__contents, properties={'annotators': 'tokenize, ssplit, pos, lemma, ner, parse, coref', 'coref.algorithm': 'neural', 'coref.neural.greedyness': '0.51'})
+        # Modified by Neo2100, extract coreNLP for perforamnce
+        # nlp = CoreNLPWrapper()
+        # annotated = nlp.annotate(self.__contents, properties={'annotators': 'tokenize, ssplit, pos, lemma, ner, parse, coref', 'coref.algorithm': 'neural', 'coref.neural.greedyness': '0.51'})
 
-        return self.__rebuild_contents(annotated['sentences'], self.__eval_corefs(annotated['corefs'], verbose))
+        return self.__rebuild_contents(self.annotated['sentences'], self.__eval_corefs(self.annotated['corefs'], verbose))
 
     def __eval_corefs(self, json_corefs, verbose=False):
         corefs = {}
