@@ -76,7 +76,11 @@ class CorefResolver:
                 replacement = self.__replace(s_index, token, corefs)
 
                 if replacement is None:
-                    resolved += token['originalText'] + ' '
+                    # Modified by Neo2100, prevent unnessacary space
+                    if token['originalText'] in ["i.e.","al.","e.g."]:
+                        resolved += token['originalText'] 
+                    else:
+                        resolved += token['originalText'] + ' '
                 elif not replacement is '':
                     # Modified by Neo2100, extract coreNLP for perforamnce (keep changes in annotated)
                     token['originalText'] = replacement
