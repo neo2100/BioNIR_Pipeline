@@ -60,7 +60,7 @@ class VectorSimilarity:
                 else:
                     text = document['text']
 
-                if 'originalSentences' in document:
+                if 'originalSentences' in document and document['originalSentences'].__len__() > index:
                     snippet = document['originalSentences'][index]
                 else:
                     snippet = document['sentences'][index]
