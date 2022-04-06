@@ -39,6 +39,9 @@ class AbbrevResolver:
                         # Modified by Neo2100
                         if abbrev.split().__len__()>1: # assume abbreviations are only one word
                             continue
+                        if len(abbrev)<2: # assume abbreviations are more than one character
+                            continue
+
                         reference = self.ruleBasedReferenceFinder(abbrev, sub_tree.parent().leaves())
 
                         #left = sub_tree.left_sibling()
@@ -63,6 +66,8 @@ class AbbrevResolver:
                     if abbrev in abbrev_refs: # check if already has catched it
                         continue
                     if abbrev.split().__len__()>1: # assume abbreviations are only one word
+                        continue
+                    if len(abbrev)<2: # assume abbreviations are more than one character
                         continue
                     
                     reference = self.ruleBasedReferenceFinder(abbrev, possibleReference)
@@ -102,6 +107,8 @@ class AbbrevResolver:
         maxLength = len(abbrev)
         if abbrev.endswith('s'):
             maxLength = maxLength - 1
+
+        maxLength = min(maxLength,4) # prevent long ones!
         
         acceptable = False
         while len(possibleReference) > 0:
@@ -114,7 +121,7 @@ class AbbrevResolver:
                 reference.insert(0, ref)
                 maxLength = maxLength - 1
             
-            if maxLength == 0:
+            if maxLength <= 0:
                 break
 
         return ' '.join(reference).strip()
