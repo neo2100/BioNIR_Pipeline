@@ -30,8 +30,13 @@ class MiddleBM25:
             print("ERROR: documents is missing in the input for LocalBM25")
             return input
 
+        if input['documents'].__len__() == 0:
+            print("WARNING: no document found in the documents for LocalBM25")
+            return input
+
         rankedDocuments = self.BM25Model.rankDocuments(
             self.query, input['documents'])
+        # sort documents based on ranking scores
         input['documents'] = [next(document for document in input['documents'] if document["id"]
                                    == rankedDocuments[x][0]) for x in range(0, min(self.maxDocumentNumber, rankedDocuments.__len__()))]
         return input
