@@ -19,19 +19,19 @@ from .pipe.pipe import Pipe
 class Pipeline:
 
     def __init__(self):
-        self.pipeline = {}
+        self.pipeline = []
 
     def execute(self, input):
-        for pipe in self.pipeline.items():
-            output = pipe[1].execute(input)
+        for pipe in self.pipeline:
+            output = pipe.execute(input)
             input = output
         return output
 
     def push(self, pipeName, parameters):
-        self.pipeline[pipeName] = Pipe(pipeName, parameters)
+        self.pipeline.append(Pipe(pipeName, parameters))
 
     def pop(self, pipeName):
-        self.pipeline.pop(pipeName)
+        pass #self.pipeline.pop(pipeName)
 
     def clear(self):
-        self.pipeline.clear()
+        pass #self.pipeline.clear()

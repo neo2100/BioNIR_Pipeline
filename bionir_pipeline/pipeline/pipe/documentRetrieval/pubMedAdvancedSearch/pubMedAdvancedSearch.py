@@ -40,6 +40,13 @@ class PubMedAdvancedSearch:
         bestQueryString = self.findBestQueryString()
         input['documents'] = fetchDocuments(
             bestQueryString, self.fetchMaxDocumentNumber)
+
+        if input['documents'].__len__() == 0:
+            input['documents'] = fetchDocuments(
+                self.queryParser.removeStopWords(self.query), self.fetchMaxDocumentNumber)
+            if input['documents'].__len__() == 0:
+                input['documents'] = fetchDocuments(self.query, self.fetchMaxDocumentNumber)
+
         return input
 
     def findBestQueryString(self):

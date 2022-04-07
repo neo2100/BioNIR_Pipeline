@@ -50,7 +50,8 @@ class Server:
 
     def __del__(self):
         if self.isServerStarted():
-            stopServer()
+            # self.stopServer()
+            print("WARNING: Server is still running!")
 
     def isServerStarted(self):
         # There might be a better way...
