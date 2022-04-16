@@ -4,6 +4,7 @@
 # Output: a list of "rankedSnippets" at least containing: "score", "id", "text", "snippet", "directLink" and "type"
 
 from .vectorSimilarity.vectorSimilarity import VectorSimilarity
+from .rankingBM25.rankingBM25 import RankingBM25
 
 class Ranking:
 
@@ -11,6 +12,8 @@ class Ranking:
         self.rankingType = rankingType
         if rankingType == "VectorSimilarity":
             self.rankingPipe = VectorSimilarity(paramaters)
+        elif rankingType == "RankingBM25":
+            self.rankingPipe = RankingBM25(paramaters)
 
     def execute(self, input):
         return self.rankingPipe.execute(input)

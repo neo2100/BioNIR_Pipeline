@@ -40,6 +40,10 @@ class BioasqTaskBPhaseA:
         count = goldenQuestions.__len__()
         for index, goldenQuestion in enumerate(goldenQuestions):
             truePositives = falsePositives = falseNegative = 0
+
+            if modelQuestions[index]['documents'].__len__() == 0:
+                continue
+
             for document in goldenQuestion['documents']:
                 if document in modelQuestions[index]['documents']:
                     truePositives = truePositives + 1
@@ -71,6 +75,9 @@ class BioasqTaskBPhaseA:
         count = goldenQuestions.__len__()
         for index, goldenQuestion in enumerate(goldenQuestions):
             sameCharacterSize = modelCharacterSize = goldenCharacterSize = 0
+            
+            if modelQuestions[index]['snippets'].__len__() == 0:
+                continue
 
             # golden size and same size
             for goldenSnippet in goldenQuestion['snippets']:

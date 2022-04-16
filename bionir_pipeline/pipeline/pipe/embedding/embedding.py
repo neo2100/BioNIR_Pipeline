@@ -3,6 +3,7 @@
 # Output: "query" and "queryEmbedded"
 
 from .sbert.sbert import SBERT
+from .bioasqBert.bioasqBert import BioASQBERT
 
 class Embedding:
 
@@ -10,6 +11,8 @@ class Embedding:
         self.embeddingType = embeddingType
         if embeddingType == "SBERT":
             self.embeddingPipe = SBERT(paramaters)
+        elif embeddingType == "BioASQBERT":
+            self.embeddingPipe = BioASQBERT(paramaters)
 
     def execute(self, input):
         return self.embeddingPipe.execute(input)
