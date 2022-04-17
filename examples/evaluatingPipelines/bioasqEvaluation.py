@@ -3,7 +3,7 @@ import json
 from bionir_pipeline import Evaluator
 
 goldenFileName = 'BioASQ-task10bPhaseB-testset2'
-modelFileName = 'BioASQ-task10bPhaseA-testset2_output_BioNIR_Basic7'
+modelFileName = 'BioASQ-task10bPhaseA-testset2_output_BM25_base'
 
 script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
 # preparing inputs
