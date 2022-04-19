@@ -35,7 +35,7 @@ class BioASQBERT:
             print("ERROR: query is missing in the input for BioASQBERT")
             return input
 
-        input['queryEmbedded'] = self.model.encode(input['query'])
+        input['queryEmbedded'] = self.encode(input['query'])
 
         if not 'documents' in input:
             print("ERROR: dpcuments is missing in the input for BioASQBERT")
