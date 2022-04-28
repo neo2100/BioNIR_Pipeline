@@ -9,18 +9,20 @@ pipeline = Pipeline()
 # NOTE: while pushing pipes, the order is important
 #pipeline.push("PubMedSimpleSearch as documentRetrieval", {'maxDocumentNumber': 2})
 pipeline.push("PubMedAdvancedSearch as documentRetrieval", {'maxAroundDocumentNumber': 500,'fetchMaxDocumentNumber':5000})
-#pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
+pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
 #pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'originalSentences'})
 #pipeline.push("CoreNLPAnnotator as preprocessing", {'properties':{'annotators': 'tokenize, ssplit, pos, lemma, ner, parse, coref', 'coref.algorithm': 'neural', 'coref.neural.greedyness': '0.51'}})
 #pipeline.push("CoreferenceResolverByKGen as preprocessing", {})
 #pipeline.push("AbbreviationResolverByKGen as preprocessing", {})
-#pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'sentences'})
+pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'sentences'})
 #pipeline.push("SBERT as embedding", {
 #              'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
-#pipeline.push("VectorSimilarity as ranking", {
- #             'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+
+pipeline.push("BioASQHead as embedding", { 'modelName': "bionirhead_nn0_qu_Interval_10.pt"})
+pipeline.push("VectorSimilarity as ranking", {
+              'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
 #pipeline.push("SnippetBeginEndOffset as utility", {})
-pipeline.push("RankingBM25 as ranking", {'maxDocumentNumber': 10})
+#pipeline.push("RankingBM25 as ranking", {'maxDocumentNumber': 10})
 
 #print(pipeline.execute({'query': "Covid in Iran"}))
 output = pipeline.execute({'query': "List clinical phenotypes and molecular genetic features of patients with KMT2B-related disorders"})

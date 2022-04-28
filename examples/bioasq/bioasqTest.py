@@ -12,7 +12,7 @@
 from bionir_pipeline import Pipeline
 import os
 import json
-inputFileName = 'BioASQ-task10bPhaseA-testset1'
+inputFileName = 'BioASQ-task10bPhaseA-testset4'
 
 
 pipeline = Pipeline()
@@ -20,18 +20,18 @@ pipeline = Pipeline()
 # NOTE: while pushing pipes, the order is important
 pipeline.push("PubMedAdvancedSearch as documentRetrieval", {
               'maxAroundDocumentNumber': 500, 'fetchMaxDocumentNumber': 5000})
-#pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 125})
+pipeline.push("MiddleBM25 as documentRetrieval", {'maxDocumentNumber': 100})
 #pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'originalSentences'})
 #pipeline.push("CoreNLPAnnotator as preprocessing", {'properties':{'annotators': 'tokenize, ssplit, pos, lemma, ner, parse, coref', 'coref.algorithm': 'neural', 'coref.neural.greedyness': '0.51'}})
 #pipeline.push("CoreferenceResolverByKGen as preprocessing", {})
 #pipeline.push("AbbreviationResolverByKGen as preprocessing", {})
-#pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'sentences'})
-#pipeline.push("SBERT as embedding", {
-#              'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
-#pipeline.push("VectorSimilarity as ranking", {
-#              'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
-#pipeline.push("SnippetBeginEndOffset as utility", {})
-pipeline.push("RankingBM25 as ranking", {'maxDocumentNumber': 10})
+pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'sentences'})
+pipeline.push("SBERT as embedding", {
+              'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
+pipeline.push("VectorSimilarity as ranking", {
+              'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+pipeline.push("SnippetBeginEndOffset as utility", {})
+#pipeline.push("RankingBM25 as ranking", {'maxDocumentNumber': 10})
 
 # preparing inputs
 questions = []
@@ -43,7 +43,7 @@ with open(abs_file_path, 'rb') as document_file:
 
 # saving outputs in a file
 script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-abs_file_path = os.path.join(script_dir, (inputFileName+'_output_BM25_base'))
+abs_file_path = os.path.join(script_dir, (inputFileName+'_output_basic'))
 
 # executing pipeline and generate outputs
 outputQuestions = []

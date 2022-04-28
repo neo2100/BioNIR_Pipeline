@@ -6,7 +6,7 @@ pipeline = Pipeline()
 #pipeline.push("CoreferenceResolverByKGen as preprocessing", {})
 
 pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'sentences'})
-pipeline.push("BioASQBERT as embedding", { 'modelName': "sbert_small_windows.pt"})
+pipeline.push("BioASQHead as embedding", { 'modelName': "bionirhead_nn0_qu_Interval_10.pt"})
 print(pipeline.execute({'query': 'who is he?','documents':[{'text': "Barack Obama was born in Hawaii.  He is the president. Obama was elected in 2008."}]}))
 
 #pipeline.push("AbbreviationResolverByKGen as preprocessing", {})
