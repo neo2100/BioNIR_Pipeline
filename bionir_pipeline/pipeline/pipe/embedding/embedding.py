@@ -5,6 +5,7 @@
 from .sbert.sbert import SBERT
 from .bioasqBert.bioasqBert import BioASQBERT
 from .bioasqHead.bioasqHead import BioASQHead
+from .bioasqHeadOne.bioasqHeadOne import BioASQHeadOne
 
 class Embedding:
 
@@ -16,6 +17,8 @@ class Embedding:
             self.embeddingPipe = BioASQBERT(paramaters)
         elif embeddingType == "BioASQHead":
             self.embeddingPipe = BioASQHead(paramaters)
+        elif embeddingType == "BioASQHeadOne":
+            self.embeddingPipe = BioASQHeadOne(paramaters)
 
     def execute(self, input):
         return self.embeddingPipe.execute(input)

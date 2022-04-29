@@ -18,9 +18,12 @@ pipeline.push("SentenceSplittingByNLTK as preprocessing", {'outputName': 'senten
 #pipeline.push("SBERT as embedding", {
 #              'modelName': "sentence-transformers/multi-qa-mpnet-base-cos-v1"})
 
-pipeline.push("BioASQHead as embedding", { 'modelName': "bionirhead_nn0_qu_Interval_10.pt"})
-pipeline.push("VectorSimilarity as ranking", {
+#pipeline.push("BioASQHead as embedding", { 'modelName': "bionirhead_nn0_qu_Interval_10.pt"})
+pipeline.push("BioASQHeadOne as embedding", { 'modelName': "bionirheadone_nn0_qu_Interval_10.pt"})
+pipeline.push("SentencesScored as ranking", {
               'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
+#pipeline.push("VectorSimilarity as ranking", {
+#              'metricName': "dot-product", 'maxDocumentNumber': 10, 'maxSnippetNumber': 10})
 #pipeline.push("SnippetBeginEndOffset as utility", {})
 #pipeline.push("RankingBM25 as ranking", {'maxDocumentNumber': 10})
 
