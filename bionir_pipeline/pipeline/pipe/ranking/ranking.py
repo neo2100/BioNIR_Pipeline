@@ -6,6 +6,7 @@
 from .vectorSimilarity.vectorSimilarity import VectorSimilarity
 from .rankingBM25.rankingBM25 import RankingBM25
 from .sentencesScored.sentencesScored import SentencesScored
+from .hybridScore.hybridScore import HybridScore
 
 class Ranking:
 
@@ -17,6 +18,8 @@ class Ranking:
             self.rankingPipe = RankingBM25(paramaters)
         elif rankingType == "SentencesScored":
             self.rankingPipe = SentencesScored(paramaters)
+        elif rankingType == "HybridScore":
+            self.rankingPipe = HybridScore(paramaters)
 
     def execute(self, input):
         return self.rankingPipe.execute(input)

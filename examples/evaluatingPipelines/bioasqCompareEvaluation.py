@@ -2,9 +2,9 @@ import os
 import json
 from bionir_pipeline import Evaluator
 
-goldenFileName = 'BioASQ-task10bPhaseB-testset1'
-model1FileName = 'BioASQ-task10bPhaseA-testset1_output_BioNIR_Basic4'
-model2FileName = 'BioASQ-task10bPhaseA-testset1_output_BioNIR_Basic3'
+goldenFileName = 'BioASQ-task10bPhaseB-testset3'
+model1FileName = 'BioASQ-task10bPhaseA-testset3_output_basic_mid7'
+model2FileName = 'BioASQ-task10bPhaseA-testset3_output_bionirheadone_nn0t_qu_ended'
 
 script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
 # preparing inputs
@@ -28,6 +28,7 @@ output2 = bioasqTaskBPhaseA.execute(
     {'goldenQuestions': goldenQuestions, 'modelQuestions': model2Questions})
 
 for index, model1Question in enumerate(output1['modelQuestions']):
-    if model1Question['snippetEvaluation']['recall'] != output2['modelQuestions'][index]['snippetEvaluation']['recall']:
-        print(index, model1Question["body"], model1Question['snippetEvaluation']['recall'], output2['modelQuestions'][index]['snippetEvaluation']['recall'])
+    if 'snippetEvaluation' in model1Question:
+        if model1Question['snippetEvaluation']['recall'] != output2['modelQuestions'][index]['snippetEvaluation']['recall']:
+            print(index, model1Question["body"], model1Question['snippetEvaluation']['recall'], output2['modelQuestions'][index]['snippetEvaluation']['recall'])
 
