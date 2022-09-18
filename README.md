@@ -1,7 +1,7 @@
 # BioNIR Pipeline
 Explainable Neural Information Retrieval in Biomedical Science (BioNIR) _ Information Retrieval Pipeline for BioASQ Task B
 
-It is an ongoing project to create an bio information retrieval in pipeline framework and easy to reconfigure. Please feel free to contact here or in LinkedIn if you are interested to collaborate.
+It is an ongoing project to create a bio information retrieval in pipeline framework and easy to reconfigure. Please feel free to contact here or in LinkedIn if you are interested to collaborate.
 
 
 To Do
